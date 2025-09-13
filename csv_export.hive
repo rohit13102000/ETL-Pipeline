@@ -1,0 +1,5 @@
+INSERT OVERWRITE LOCAL DIRECTORY '/home/talentum/ProjectDBDA/hive_export/'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+SELECT * FROM user_data;
+
