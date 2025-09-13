@@ -13,24 +13,4 @@ hadoop_ingest.sh : shell script , it will upload data to hdfs
 
 hadoo_clear.sh : it will remove raw data from hadoop once it is loaded into spark
 
-      +--------------------+
-      | data_ingest/ (new) |
-      +--------+-----------+
-               |
-     Move to: old_data/
-               |
-       Upload to HDFS
-               ↓
-     +------------------+
-     |     HDFS (raw)   |
-     +--------+---------+
-              ↓
-   Spark Transformation (cleaning, parsing)
-              ↓
-     +------------------+
-     |   Hive (cleaned) |
-     +--------+---------+
-              ↓
-   Export to hive_export/ (local)
-              ↓
-     Orchestrated by Airflow DAG
+ 
